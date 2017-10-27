@@ -13,12 +13,17 @@
       </v-tabs-bar>
       <v-tabs-items>
         <v-tabs-content
-          v-for="i in items"
-          :key="i"
-          :id="'tab-' + i"
+          :id="'tab-Table'"
         >
           <v-card flat>
-            <v-card-text>{{ text[1] }}</v-card-text>
+            <v-card-text><table-league></table-league></v-card-text>
+          </v-card>
+        </v-tabs-content>
+        <v-tabs-content
+          :id="'tab-Teams'"
+        >
+          <v-card flat>
+            <v-card-text><team-list></team-list></v-card-text>
           </v-card>
         </v-tabs-content>
       </v-tabs-items>
@@ -26,6 +31,9 @@
   </div>  
 </template>
 <script>
+  import TableLeague from '@/components/TableLeague'
+  import TeamList from '@/components/TeamList'
+
   export default {
     name: 'ShowView',
     data () {
@@ -33,6 +41,10 @@
         items: ['Table', 'Teams'],
         text: ['content', 'content2']
       }
+    },
+    components: {
+      'table-league': TableLeague,
+      'team-list': TeamList
     }
   }
 </script>

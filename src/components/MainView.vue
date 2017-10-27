@@ -1,14 +1,16 @@
 <template>
-  <navigation></navigation>
-
+  <div>
+    <tab-view></tab-view>
+  </div>
 </template>
 
 <script>
-import Navigation from '@/components/Navigation'
+import Tabs from '@/components/TabsView'
+
 export default {
   name: 'MainView',
   components: {
-    'navigation': Navigation
+    'tab-view': Tabs
   }
 }
 </script>

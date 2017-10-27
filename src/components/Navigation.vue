@@ -1,14 +1,21 @@
 <template>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Soccer</a>
-      <ul id="nav-mobile" class="right">
-        <li class="leages" v-on:click="makeActive('leages')"><a href="sass.html">Leagues</a></li>
-        <li class="login" v-on:click="makeActive('register')"><a href="badges.html"> Login</a></li>
-        <li class="register" v-on:click="makeActive('register')" ><a href="collapsible.html">Register</a></li>
-      </ul>
-    </div>
-  </nav>
+  <v-toolbar dark color="primary">
+    <v-toolbar-side-icon></v-toolbar-side-icon>
+    <v-toolbar-title class="white--text">Title</v-toolbar-title>
+    <v-spacer></v-spacer>
+    <router-link tag="button" to="leagues" class="btn btn--flat btn--raised">
+      <span>Leagues</span>
+    </router-link>
+    <router-link tag="button" to="register" class="btn btn--flat btn--raised">
+      <span>Register</span>
+    </router-link>
+    <router-link tag="button" to="login" class="btn btn--flat btn--raised">
+      <span>Login</span>
+    </router-link>
+    <router-link tag="button" to="logout" class="btn btn--flat btn--raised">
+      <span>Logout</span>
+    </router-link>
+  </v-toolbar>
 </template>
 
 <script>
@@ -20,9 +27,10 @@ export default {
     }
   },
   methods: {
-    makeActive: (item) => {
-      this.active = item
+    alert_element: () => {
+      alert('hi')
     }
+
   }
 }
 </script>

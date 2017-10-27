@@ -1,19 +1,9 @@
 <template>
   <v-toolbar dark color="primary">
-    <v-toolbar-side-icon></v-toolbar-side-icon>
-    <v-toolbar-title class="white--text">Title</v-toolbar-title>
+    <v-toolbar-title class="white--text">Soccer Api</v-toolbar-title>
     <v-spacer></v-spacer>
-    <router-link tag="button" to="/" class="btn btn--flat btn--raised">
+    <router-link tag="button" to="/" class="btn btn--flat btn--raised link">
       <span>Leagues</span>
-    </router-link>
-    <router-link tag="button" to="register" class="btn btn--flat btn--raised">
-      <span>Register</span>
-    </router-link>
-    <router-link tag="button" to="login" class="btn btn--flat btn--raised">
-      <span>Login</span>
-    </router-link>
-    <router-link tag="button" to="logout" class="btn btn--flat btn--raised">
-      <span>Logout</span>
     </router-link>
   </v-toolbar>
 </template>
@@ -25,16 +15,13 @@ export default {
     return {
       active: ''
     }
-  },
-  methods: {
-    alert_element: () => {
-      alert('hi')
-    }
-
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .link span{
+    color: #fff;
+  } 
 </style>

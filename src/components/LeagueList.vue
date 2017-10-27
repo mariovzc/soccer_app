@@ -10,9 +10,9 @@
                 <v-list-tile-sub-title class="sub-title"> last update {{ league.lastUpdated | formatDate }}</v-list-tile-sub-title>
               </v-list-tile-content>
               <v-list-tile-action>
-                <v-btn icon ripple v-on:click="show(league.id)">
-                  <v-icon color="grey lighten-1">remove_red_eye</v-icon>
-                </v-btn>
+                <a v-bind:href="'#/leage/' + league.id" class="btn btn--icon btn--raised">
+                  <v-icon color="grey lighten-1">remove_red_eye</v-icon>        
+                </a>
               </v-list-tile-action>
             </v-list-tile>
           </v-list>
@@ -41,6 +41,8 @@
 <script>
   import axios from 'axios'
   import moment from 'moment'
+  import router from 'vue-router'
+
   export default {
     data () {
       return {
@@ -71,7 +73,7 @@
     },
     methods: {
       show: (id) => {
-        window.location.href = '/#/league/' + id
+        router.push({path: 'league', params: { id: id }})
       }
     }
   }

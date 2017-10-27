@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import MainView from '@/components/MainView'
+import ShowView from '@/components/ShowView'
+
 import Vuetify from 'vuetify'
 
 Vue.use(Vuetify)
@@ -25,8 +27,8 @@ export default new Router({
     },
     {
       path: '/leage/:id',
-      name: 'MainView',
-      component: MainView
+      name: 'ShowView',
+      component: ShowView
     }
   ]
 })

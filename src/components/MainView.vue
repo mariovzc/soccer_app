@@ -1,13 +1,14 @@
 <template>
+  <navigation></navigation>
+
 </template>
 
 <script>
+import Navigation from '@/components/Navigation'
 export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+  name: 'MainView',
+  components: {
+    'navigation': Navigation
   }
 }
 </script>

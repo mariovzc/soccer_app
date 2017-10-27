@@ -3,7 +3,7 @@
     <v-toolbar-side-icon></v-toolbar-side-icon>
     <v-toolbar-title class="white--text">Title</v-toolbar-title>
     <v-spacer></v-spacer>
-    <router-link tag="button" to="leagues" class="btn btn--flat btn--raised">
+    <router-link tag="button" to="/" class="btn btn--flat btn--raised">
       <span>Leagues</span>
     </router-link>
     <router-link tag="button" to="register" class="btn btn--flat btn--raised">

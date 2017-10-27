@@ -12,6 +12,21 @@ export default new Router({
       path: '/',
       name: 'MainView',
       component: MainView
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: MainView
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: MainView
+    },
+    {
+      path: '/leage/:id',
+      name: 'MainView',
+      component: MainView
     }
   ]
 })

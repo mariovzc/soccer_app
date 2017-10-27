@@ -1,16 +1,16 @@
 <template>
   <div>
-    <tab-view></tab-view>
+    <league-list></league-list>
   </div>
 </template>
 
 <script>
-import Tabs from '@/components/TabsView'
+import LeagueList from '@/components/LeagueList'
 
 export default {
   name: 'MainView',
   components: {
-    'tab-view': Tabs
+    'league-list': LeagueList
   }
 }
 </script>

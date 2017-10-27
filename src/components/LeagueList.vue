@@ -4,13 +4,13 @@
       <v-flex xs12 sm8 offset-sm2>
         <v-card>
           <v-list two-line subheader>
-            <v-list-tile avatar v-for="league in leagues" v-bind:key="league.caption" @click="">
+            <v-list-tile avatar v-for="league in leagues" v-bind:key="league.caption" >
               <v-list-tile-content>
                 <v-list-tile-title class="title">{{ league.caption }} - Match day: {{ league.currentMatchday }}</v-list-tile-title>
                 <v-list-tile-sub-title class="sub-title"> last update {{ league.lastUpdated | formatDate }}</v-list-tile-sub-title>
               </v-list-tile-content>
               <v-list-tile-action>
-                <v-btn icon ripple>
+                <v-btn icon ripple v-on:click="show(league.id)">
                   <v-icon color="grey lighten-1">remove_red_eye</v-icon>
                 </v-btn>
               </v-list-tile-action>
@@ -67,6 +67,11 @@
     filters: {
       formatDate: (value) => {
         return moment(String(value)).startOf('day').fromNow()
+      }
+    },
+    methods: {
+      show: (id) => {
+        window.location.href = '/#/league/' + id
       }
     }
   }

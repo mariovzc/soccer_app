@@ -1,12 +1,13 @@
 <template>
   <div>
     <v-tabs dark fixed centered >
-      <v-tabs-bar class="cyan">
+      <v-tabs-bar class="light-blue">
         <v-tabs-slider class="yellow"></v-tabs-slider>
         <v-tabs-item
           v-for="i in items"
           :key="i"
           :href="'#tab-' + i"
+          class="tab-link"
         >
           {{ i }}
         </v-tabs-item>
@@ -49,4 +50,7 @@
   }
 </script>
 <style scoped>
+  .tab-link a{
+    color: #ffffff !important;
+  }
 </style>

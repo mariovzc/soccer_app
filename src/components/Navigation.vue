@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar dark color="primary">
+  <v-toolbar dark color="light-blue darken-4">
     <v-toolbar-title class="white--text">Soccer Api</v-toolbar-title>
     <v-spacer></v-spacer>
     <router-link tag="button" to="/" class="btn btn--flat btn--raised link">
@@ -23,5 +23,5 @@ export default {
 <style scoped>
   .link span{
     color: #fff;
-  } 
+  }
 </style>
